@@ -1,0 +1,22 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Chat App\r Node express javascript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Navdeep-Singh-Ghotra/ChatApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Navdeep-Singh-Ghotra/ChatApp/issues"
+  },
+  "homepage": "https://github.com/Navdeep-Singh-Ghotra/ChatApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
