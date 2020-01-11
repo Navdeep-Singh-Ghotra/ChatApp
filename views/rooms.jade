@@ -6,7 +6,9 @@ block content
     table.table.table-striped
         thead
             tr
+                th
                 th Name
+                th
                 th Id
         tbody
             each room in rooms
@@ -14,4 +16,5 @@ block content
                 tr
                     td(style="width: 50px;"): a.btn.btn-primary(href="/admin/rooms/delete/#{room.id}") Delete room
                     td= room.name
+                    td(style="width: 50px;"): a.btn.btn-primary(href="/admin/rooms/edit/#{room.id}") Edit room
                     td= room.id
