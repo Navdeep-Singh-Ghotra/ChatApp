@@ -35,23 +35,21 @@ router.get('/rooms/delete/:id', function(req,res){
 });
 
 router.route('/rooms/edit/:id')
-.get(function(req,res){
+.all(function(req,res,next){
     var roomId = req.params.id
     var room = _.find( rooms, r => r.id === roomId);
     if(!room){
         res.sendStatus(404);
         return;
     }
-    res.render("edit", {room});
+    res.locals.room = room;
+    next()
+})
+.get(function(req,res){
+    res.render("edit");
 })
 
 .post(function(req,res){
-    var roomId = req.params.id
-    var room = _.find( rooms, r => r.id === roomId);
-    if(!room){
-        res.sendStatus(404);
-        return;
-    }
-    room.name = req.body.name;
+    res.locals.room.name = req.body.name;
     res.redirect(req.baseUrl+ "/rooms");
 });
