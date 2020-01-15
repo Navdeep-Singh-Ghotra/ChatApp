@@ -39,3 +39,4 @@ jobs:
           command: |
             ls -al
             echo '^^^ That is th erepo contents ^^^'
+            node -v
