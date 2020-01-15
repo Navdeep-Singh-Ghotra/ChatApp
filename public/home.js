@@ -21,7 +21,7 @@ $(function () {
         $.ajax({
             type: "POST",
             url: "/api/rooms/" + roomId + "/messages",
-            data: JSON.stringyfy(message),
+            data: JSON.stringify(message),
             contentType: "application/json"
         }).success(function () {
             $("#message").val("");
