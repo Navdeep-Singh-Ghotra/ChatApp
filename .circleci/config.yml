@@ -34,4 +34,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: 
+          name: This is test command
+          command: |
+            ls -al
+            echo '^^^ That is th erepo contents ^^^'
