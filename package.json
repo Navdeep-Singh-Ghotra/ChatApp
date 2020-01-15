@@ -21,6 +21,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "jade": "^1.11.0",
+    "jquery": "1.12.4",
     "lodash": "^4.17.15",
     "node-uuid": "^1.4.8"
   }
