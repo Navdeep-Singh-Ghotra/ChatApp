@@ -53,3 +53,14 @@ router.route('/rooms/edit/:id')
     res.locals.room.name = req.body.name;
     res.redirect(req.baseUrl+ "/rooms");
 });
+
+router.get("/books", (req, res) => {
+    console.log("comes here")
+    const sql = "SELECT * FROM Books ORDER BY Title"
+    pool.query(sql, [], (err, result) => {
+      if (err) {
+        return console.error(err.message);
+      }
+      res.render("books", { model: result.rows });
+    });
+});
