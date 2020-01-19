@@ -13,6 +13,7 @@ app.use(express.static("node_modules/bootstrap/dist"));
 app.use(express.static("node_modules/jquery/dist"));
 app.use(require("./logging.js"))
 
+
 require('express-debug')(app, {});
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
